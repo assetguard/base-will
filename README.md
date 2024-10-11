@@ -1,39 +1,150 @@
-## Create Aptos Dapp Boilerplate Template
+# Locked Coins DApp
 
-The Boilerplate template provides a starter dapp with all necessary dapp infrastructure and a simple wallet info implementation, transfer APT and a simple message board functionality to send and read a message on chain.
+A decentralized application for managing time-locked cryptocurrency assets on the Aptos blockchain. This DApp allows sponsors to create, manage, and distribute time-locked coins to recipients.
 
-## Read the Boilerplate template docs
+## 🎯 Features
 
-To get started with the Boilerplate template and learn more about the template functionality and usage, head over to the [Boilerplate template docs](https://aptos.dev/en/build/create-aptos-dapp/templates/boilerplate)
+- **Timed Distribution**: Set specific dates for asset distribution to beneficiaries
+- **Multi-Asset Support**: Compatible with any coin type on the Aptos blockchain
+- **Secure Management**: Full control over lockups with ability to modify or revoke
+- **User-Friendly Interface**: Modern Vite-powered frontend for easy interaction
+- **Real-Time Updates**: Live tracking of locked assets and claim status
 
-## The Boilerplate template provides:
+## 🏗️ Architecture
 
-- **Folder structure** - A pre-made dapp folder structure with a `frontend` and `contract` folders.
-- **Dapp infrastructure** - All required dependencies a dapp needs to start building on the Aptos network.
-- **Wallet Info implementation** - Pre-made `WalletInfo` components to demonstrate how one can use to read a connected Wallet info.
-- **Transfer APT implementation** - Pre-made `transfer` components to send APT to an address.
-- **Message board functionality implementation** - Pre-made `message` components to send and read a message on chain
+### Smart Contract
+The core functionality is implemented in the `locked_coins` Move module, which provides:
 
-## What tools the template uses?
+- Creation of time-locked coin deposits
+- Management of locks (update/cancel)
+- Claiming of unlocked coins by recipients
+- Comprehensive event emission for frontend tracking
 
-- React framework
-- Vite development tool
-- shadcn/ui + tailwind for styling
-- Aptos TS SDK
-- Aptos Wallet Adapter
-- Node based Move commands
+### Frontend
+Built with:
+- Vite
+- React
+- Petra Wallet integration
+- Tailwind CSS for styling
 
-## What Move commands are available?
+## 🚀 Getting Started
 
-The tool utilizes [aptos-cli npm package](https://github.com/aptos-labs/aptos-cli) that lets us run Aptos CLI in a Node environment.
+### Prerequisites
+- Node.js (v14 or higher)
+- Petra Wallet browser extension
+- Access to Aptos network (testnet/mainnet)
 
-Some commands are built-in the template and can be ran as a npm script, for example:
+### Installation
 
-- `npm run move:publish` - a command to publish the Move contract
-- `npm run move:test` - a command to run Move unit tests
-- `npm run move:compile` - a command to compile the Move contract
-- `npm run move:upgrade` - a command to upgrade the Move contract
-- `npm run dev` - a command to run the frontend locally
-- `npm run deploy` - a command to deploy the dapp to Vercel
+1. Clone the repository
+```bash
+git clone https://github.com/yourusername/locked-coins-dapp.git
+cd locked-coins-dapp
+```
 
-For all other available CLI commands, can run `npx aptos` and see a list of all available commands.
+2. Install dependencies
+```bash
+npm install
+```
+
+3. Start the development server
+```bash
+npm run dev
+```
+
+## 💡 Usage
+
+### For Sponsors
+
+1. **Initialize Account**
+```typescript
+// Initialize sponsor account for a specific coin type
+const tx = await initAndAddLockedCoins(
+  recipient,
+  amount,
+  unlockTimeSeconds
+);
+await tx.wait();
+```
+
+2. **Create Locks**
+Create time-locked deposits for recipients:
+- Set recipient address
+- Specify amount
+- Define unlock time
+
+3. **Manage Locks**
+- Update lockup periods
+- Cancel locks if needed
+- View all active locks
+
+### For Recipients
+
+1. **View Locks**
+Check your pending locked coins:
+```typescript
+const lockInfo = await getRecipientLockInfo(
+  sponsorAddress,
+  recipientAddress
+);
+console.log(lockInfo);
+```
+
+2. **Claim Unlocked Coins**
+Claim your coins once the unlock time has passed:
+```typescript
+const tx = await claim(sponsorAddress);
+await tx.wait();
+```
+
+## 🔒 Security Considerations
+
+- All functions have appropriate access controls
+- Withdrawal addresses can only be updated when no active locks exist
+- Events are emitted for all significant state changes
+- Frontend implements additional validation layer
+
+## 🛠️ Smart Contract API
+
+### Key Functions
+
+#### `init_and_add_locked_coins<CoinType>`
+Initializes a sponsor account and creates the first lock.
+
+#### `claim<CoinType>`
+Allows recipients to claim unlocked coins.
+
+#### `update_lockup<CoinType>`
+Enables sponsors to modify existing lock periods.
+
+#### `cancel_lockup<CoinType>`
+Permits sponsors to cancel locks and return coins.
+
+### View Functions
+
+#### `get_recipient_lock_info<CoinType>`
+Retrieves lock details for a specific recipient.
+
+#### `total_locks<CoinType>`
+Returns the total number of active locks for a sponsor.
+
+## 📊 Frontend Components
+
+- **LockCreation**: Form for creating new locks
+- **LockManagement**: Interface for updating/canceling locks
+- **RecipientDashboard**: View and claim unlocked coins
+- **TransactionHistory**: List of all lock-related transactions
+
+## 🤝 Contributing
+
+We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+
+## 📜 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- Aptos team for the blockchain platform
+- Move language developers
+- Our amazing community of testers and early adopters
