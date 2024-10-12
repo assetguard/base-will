@@ -1,4 +1,3 @@
-import { useWallet } from "@aptos-labs/wallet-adapter-react";
 // Internal components
 
 export function WalletTitle() {
