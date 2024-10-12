@@ -1,69 +1,96 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback, AvatarImage } from "./components/ui/avatar";
-import { LucideCheck } from "lucide-react";
+import { LucideCheck, Star } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const App = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="min-h-screen font-nunito">
+    <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className=" shadow-sm">
+      <header className="">
         <div className="container mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center">
-          <h1 className="text-2xl font-bold text-white mb-4 sm:mb-0">AssetGuard</h1>
-          <nav className="mb-4 sm:mb-0">
-            <ul className="flex space-x-6">
-              <li>
-                <a href="#features" className=" hover:text-blue-600">
-                  Features
-                </a>
-              </li>
-              <li>
-                <a href="#how-it-works" className=" hover:text-blue-600">
-                  How It Works
-                </a>
-              </li>
-              <li>
-                <a href="#testimonials" className=" hover:text-blue-600">
-                  Testimonials
-                </a>
-              </li>
-            </ul>
-          </nav>
-          <Button className="bg-blue-600 hover:bg-slate-400" onClick={() => navigate("/home")}>
-            Get Started
-          </Button>
+          <div className="flex items-center space-x-12">
+            <h1 className="text-xl font-semibold text-green sm:mb-0">AssetGuard</h1>
+
+            <nav className="sm:mb-0 text-navy text-sm">
+              <ul className="flex space-x-8">
+                <li>
+                  <a href="#features" className=" hover:text-blue-600">
+                    Features
+                  </a>
+                </li>
+                <li>
+                  <a href="#how-it-works" className=" hover:text-blue-600">
+                    How It Works
+                  </a>
+                </li>
+                <li>
+                  <a href="#testimonials" className=" hover:text-blue-600">
+                    Testimonials
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
+          <div className="flex space-x-3">
+            <Button
+              className="bg-white hover:bg-white text-green rounded-full text-sm px-2"
+              onClick={() => navigate("/home")}
+            >
+              Login
+            </Button>
+            <Button className="bg-green hover:bg-green rounded-full text-sm px-4" onClick={() => navigate("/home")}>
+              Get Started
+            </Button>
+          </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main>
         {/* Hero Section with Gradient */}
-        <section
-          className="py-16"
-          style={{
-            backgroundImage: "url('https://res.cloudinary.com/dgbreoalg/image/upload/v1728465228/9067193_r2kwzy.jpg')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
-            backgroundBlendMode: "multiply",
-          }}
-        >
+        <section className="py-16">
           <div className="container mx-auto px-8 flex flex-col md:flex-row items-center gap-8">
             <div className="w-full md:w-1/2 mb-8 md:mb-0 space-y-8 flex-col">
-              <h2 className="text-6xl font-bold mb-4 font-inter text-white">
-                Secure Your <br />
-                <span className="text-[#6EE7B7]">Digital Legacy</span>
-              </h2>
-              <p className="text-xl mb-8 pr-8">
+              <div>
+                <p className="text-green text-xs">TRY IT NOW!</p>
+                <h2 className="text-4xl font-semibold mb-4 text-navy">
+                  Secure Your <br />
+                  <span className="">Digital Legacy</span>
+                </h2>
+              </div>
+
+              <p className="text-xs mb-8 pr-8 text-green">
                 Set up a beneficiary system for your digital assets. Ensure your funds are recovered and distributed
                 according to your wishes.
               </p>
-              <Button onClick={() => navigate("/home")} className="bg-blue-600 hover:bg-slate-500" size="lg">
-                Get Started
-              </Button>
+
+              <div className="flex space-x-5 items-center">
+                <Button
+                  onClick={() => navigate("/home")}
+                  className="bg-green hover:bg-green rounded-full px-6"
+                  size="lg"
+                >
+                  Get Started Now
+                </Button>
+
+                <div className="space-y-1">
+                  <div className="flex space-x-1 items-center">
+                    <Star className="text-yellow-400 h-4 w-4" />
+                    <Star className="text-yellow-400 h-4 w-4" />
+                    <Star className="text-yellow-400 h-4 w-4" />
+                    <Star className="text-yellow-400 h-4 w-4" />
+                    <Star className="text-yellow-400 h-4 w-4" />
+                    <p className="text-green font-semibold text-sm">5.0</p>
+                  </div>
+
+                  <p className="text-green text-xs">Trusted by 200+ individuals</p>
+                </div>
+              </div>
             </div>
             <div className="w-full md:w-1/2">
               <img
