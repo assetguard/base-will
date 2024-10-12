@@ -31,7 +31,7 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white px-20">
       {/* Header */}
       <header className="">
         <div className="container mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center">
@@ -78,10 +78,10 @@ const App = () => {
         {/* Hero Section with Gradient */}
         <section className="py-16">
           <div className="container mx-auto px-8 flex flex-col md:flex-row items-center gap-8">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0 space-y-8 flex-col">
+            <div className="w-full md:w-1/2 mb-8 md:mb-0 space-y-10 flex-col">
               <div>
-                <p className="text-green text-xs">TRY IT NOW!</p>
-                <h2 className="text-4xl font-semibold mb-4 text-navy">
+                <p className="text-green text-xs">TRY IT NOW !</p>
+                <h2 className="text-7xl font-semibold mb-4 text-navy">
                   Secure Your <br />
                   <span className="">Digital Legacy</span>
                 </h2>
@@ -119,7 +119,7 @@ const App = () => {
               <img
                 src="https://utfs.io/f/PKy8oE1GN2J3A6pNlecTLpFHQKPUGyM3O2Id90ntzxhmiAsV"
                 alt="Digital Asset Security"
-                className="rounded-lg shadow-lg w-full"
+                className="rounded-lg shadow-lg w-full md:w-5/6 ml-auto"
               />
             </div>
           </div>
