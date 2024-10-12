@@ -1,7 +1,6 @@
 import { DataTableReceipt } from '@/components/DataTableRecipt';
 import { Header } from '@/components/Header';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { WalletTitle } from '@/components/WalletTitle';
 import { useWallet } from '@aptos-labs/wallet-adapter-react';
 
 const Inheritance = () => {

@@ -6,14 +6,7 @@ import { isValidNetworkName } from "@/utils/helpers";
 
 export function NetworkInfo() {
   const { network, account } = useWallet();
-  function truncateAddress(address: string): string {
-    if (!address) return "";
-
-    const start = address.substring(0, 4);
-    const end = address.substring(address.length - 3);
-
-    return `${start}...${end}`;
-  }
+  
   return (
     <div className="flex flex-col gap-6">
       <h4 className="text-lg font-medium">Network Info</h4>

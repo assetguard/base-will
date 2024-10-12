@@ -307,8 +307,12 @@ export function DataTableDemo() {
         },
       });
 
-      console.log(result);
-      setData(result[0]);
+      if (Array.isArray(result[0])) {
+        setData(result[0] as LockedCoin[]);
+      } else {
+        console.error("Unexpected result format:", result);
+        setData([]); // Set to empty array if result is not as expected
+      }
     } catch (error) {
       console.error("Failed to fetch locked coins:", error);
       toast({
