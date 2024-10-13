@@ -8,7 +8,7 @@ const Inheritance = () => {
 
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <Header />
       <div className="flex items-center justify-center flex-col mt-4">
         {connected ? (

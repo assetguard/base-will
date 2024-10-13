@@ -12,19 +12,31 @@ const App = () => {
 
   const faqs = [
     {
-      question: "Can I use this in my project?",
-      answer: "Yes. Free to use for personal and commercial projects. No attribution required.",
+      question: "How does the fund locking feature work?",
+      answer: "Users can lock up their funds on the Aptos blockchain for designated beneficiaries, ensuring that the funds are securely held until a specified unlock time or event occurs.",
     },
     {
-      question: "Is there any support available?",
-      answer: "Yes, support is available via our documentation and community forums.",
+      question: "Can I specify multiple beneficiaries?",
+      answer: "Yes, you can select multiple beneficiaries to receive the funds once the lock conditions are met.",
     },
     {
-      question: "How do I report a bug?",
-      answer: "You can report bugs through our GitHub issue tracker.",
+      question: "What happens if the owner passes away?",
+      answer: "In the event of the owner's death, the funds automatically become unlocked and are accessible to the designated beneficiaries.",
     },
-    // Add more FAQs as needed
+    {
+      question: "Is there a minimum lock-up period?",
+      answer: "Yes, you can set a minimum lock-up period based on your preferences, ensuring the funds remain secured for the desired duration.",
+    },
+    {
+      question: "Can I change the beneficiaries or unlock time after setting it?",
+      answer: "No, once the funds are locked and beneficiaries are set, changes cannot be made to ensure security and integrity of the lock conditions.",
+    },
+    {
+      question: "Is the process secure?",
+      answer: "Absolutely! The funds are secured on the Aptos blockchain, which utilizes advanced cryptography and decentralized protocols to ensure safety and transparency.",
+    },
   ];
+  
 
   const toggleFAQ = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -74,7 +86,7 @@ const App = () => {
       </header>
 
       {/* Main Content */}
-      <main>
+      <main className="space-y-10">
         {/* Hero Section with Gradient */}
         <section className="py-16">
           <div className="container mx-auto px-8 flex flex-col md:flex-row items-center gap-8">
@@ -281,7 +293,7 @@ const App = () => {
 
         {/* Stats section */}
         <section id="stats" className="bg-green text-white p-10">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-evenly items-center">
             <div className="space-y-2">
               <p className="text-4xl font-bold text-center">$500M </p>
               <p className="text-base">Total assets and funds locked </p>
@@ -315,7 +327,7 @@ const App = () => {
                     {openIndex === index ? <Minus className="ml-2 w-4 h-4" /> : <Plus className="ml-2 w-4 h-4" />}
                   </CollapsibleTrigger>
                   <CollapsibleContent>
-                    <p className="text-xs mt-3">{faq.answer}</p>
+                    <p className="text-xs text-green mt-3">{faq.answer}</p>
                   </CollapsibleContent>
                 </Collapsible>
                 <div className="border-b border-gray-300 my-5"></div> {/* Separator */}

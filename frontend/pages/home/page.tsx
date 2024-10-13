@@ -12,7 +12,7 @@ const Home = () => {
     const { connected } = useWallet();
 
   return (
-    <div className="h-screen">
+    <div className="h-screen bg-white">
       <Header />
       <div className="flex items-center justify-center flex-col mt-4">
         {connected ? (
