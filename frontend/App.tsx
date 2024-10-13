@@ -13,7 +13,8 @@ const App = () => {
   const faqs = [
     {
       question: "How does the fund locking feature work?",
-      answer: "Users can lock up their funds on the Aptos blockchain for designated beneficiaries, ensuring that the funds are securely held until a specified unlock time or event occurs.",
+      answer:
+        "Users can lock up their funds on the Aptos blockchain for designated beneficiaries, ensuring that the funds are securely held until a specified unlock time or event occurs.",
     },
     {
       question: "Can I specify multiple beneficiaries?",
@@ -21,22 +22,25 @@ const App = () => {
     },
     {
       question: "What happens if the owner passes away?",
-      answer: "In the event of the owner's death, the funds automatically become unlocked and are accessible to the designated beneficiaries.",
+      answer:
+        "In the event of the owner's death, the funds automatically become unlocked and are accessible to the designated beneficiaries.",
     },
     {
       question: "Is there a minimum lock-up period?",
-      answer: "Yes, you can set a minimum lock-up period based on your preferences, ensuring the funds remain secured for the desired duration.",
+      answer:
+        "Yes, you can set a minimum lock-up period based on your preferences, ensuring the funds remain secured for the desired duration.",
     },
     {
       question: "Can I change the beneficiaries or unlock time after setting it?",
-      answer: "No, once the funds are locked and beneficiaries are set, changes cannot be made to ensure security and integrity of the lock conditions.",
+      answer:
+        "No, once the funds are locked and beneficiaries are set, changes cannot be made to ensure security and integrity of the lock conditions.",
     },
     {
       question: "Is the process secure?",
-      answer: "Absolutely! The funds are secured on the Aptos blockchain, which utilizes advanced cryptography and decentralized protocols to ensure safety and transparency.",
+      answer:
+        "Absolutely! The funds are secured on the Aptos blockchain, which utilizes advanced cryptography and decentralized protocols to ensure safety and transparency.",
     },
   ];
-  
 
   const toggleFAQ = (index: any) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -53,17 +57,17 @@ const App = () => {
             <nav className="sm:mb-0 text-navy text-sm">
               <ul className="flex space-x-8">
                 <li>
-                  <a href="#features" className=" hover:text-blue-600">
+                  <a href="#features" className=" hover:text-green">
                     Features
                   </a>
                 </li>
                 <li>
-                  <a href="#how-it-works" className=" hover:text-blue-600">
+                  <a href="#how-it-works" className=" hover:text-green">
                     How It Works
                   </a>
                 </li>
                 <li>
-                  <a href="#testimonials" className=" hover:text-blue-600">
+                  <a href="#testimonials" className=" hover:text-green">
                     Testimonials
                   </a>
                 </li>
@@ -99,7 +103,7 @@ const App = () => {
                 </h2>
               </div>
 
-              <p className="text-xs mb-8 pr-8 text-green">
+              <p className="text-sm mb-8 pr-8 text-green">
                 Set up a beneficiary system for your digital assets. Ensure your funds are recovered and distributed
                 according to your wishes.
               </p>
@@ -180,54 +184,57 @@ const App = () => {
               </h2>
             </div>
 
-            <p className="text-green text-xs line-clamp-2 max-w-96">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus nemo aut explicabo omnis quisquam
-              veritatis provident, sed facilis dolor laudantium quas sunt. At soluta quasi mollitia provident doloremque
-              sunt autem alias voluptas commodi iste debitis animi tempore eveniet unde quibusdam magnam odit enim
-              repellendus saepe magni nisi, harum dolorem dignissimos.
+            <p className="text-green text-xs line-clamp-3 max-w-96">
+              Our asset locking platform allows you to securely lock your funds on the Aptos blockchain, ensuring that
+              they remain protected until specified conditions are met. With features like automatic unlocking for
+              designated beneficiaries upon the owner's passing, you can have peace of mind knowing that your assets
+              will be distributed seamlessly. Customize your beneficiary settings to suit your estate planning needs,
+              all while enjoying the transparency and security that blockchain technology provides.
             </p>
           </div>
 
-          <div className="flex space-x-3 items-center">
+          <div className="flex space-x-3 items-center mt-6">
             <Card className="bg-transparent rounded-none border border-gray-500 py-6">
               <CardContent className="flex flex-col gap-6">
                 <CircleArrowDown />
 
                 <div className="space-y-2">
-                  <p className="font-semibold text-navy">Transparency</p>
+                  <p className="font-semibold text-navy">100% Secure</p>
                   <p className="text-sm text-green">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit eos voluptatibus unde cum hic
-                    nesciunt?
+                    Our platform ensures that your assets are fully secured on the Aptos blockchain, utilizing advanced
+                    encryption and protocols to protect your funds at all times.
                   </p>
                 </div>
 
                 <CircleArrowOutUpRight />
               </CardContent>
             </Card>
+
             <Card className="bg-transparent rounded-none border border-gray-500 py-6">
               <CardContent className="flex flex-col gap-6">
                 <CircleArrowDown />
 
                 <div className="space-y-2">
-                  <p className="font-semibold text-navy">Transparency</p>
+                  <p className="font-semibold text-navy">Multiple Beneficiaries</p>
                   <p className="text-sm text-green">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit eos voluptatibus unde cum hic
-                    nesciunt?
+                    Designate multiple beneficiaries for your locked assets, allowing for a flexible and personalized
+                    approach to your estate planning.
                   </p>
                 </div>
 
                 <CircleArrowOutUpRight />
               </CardContent>
             </Card>
+
             <Card className="bg-carton rounded-none rounded-tr-[80px] border border-gray-500 py-6">
               <CardContent className="flex flex-col gap-6">
                 <CircleArrowDown />
 
                 <div className="space-y-2">
-                  <p className="font-semibold text-navy">Transparency</p>
+                  <p className="font-semibold text-navy">Time Locked</p>
                   <p className="text-sm text-green">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit eos voluptatibus unde cum hic
-                    nesciunt?
+                    Set specific time frames for your asset locking, ensuring that funds are only accessible to
+                    beneficiaries once certain conditions are met.
                   </p>
                 </div>
 
@@ -293,15 +300,19 @@ const App = () => {
 
         {/* Stats section */}
         <section id="stats" className="bg-green text-white p-10">
-          <p className="text-2xl font-semibold text-center text-sky">Why You Can Depend On Us</p>
-          <div className="flex justify-evenly items-center mt-4">
+          <p className="text-xl font-semibold text-center text-sky">Why You Can Depend On Us</p>
+          <div className="flex justify-evenly items-center mt-8">
             <div className="space-y-2">
               <p className="text-4xl font-bold text-center">$500M </p>
-              <p className="text-base">Total assets and funds locked </p>
+              <p className="text-base">Total assets locked </p>
             </div>
             <div className="space-y-2">
-              <p className="text-4xl font-bold text-center">23k + </p>
+              <p className="text-4xl font-bold text-center">$23k + </p>
               <p className="text-base">Disbursed per day </p>
+            </div>
+            <div className="space-y-2">
+              <p className="text-4xl font-bold text-center">85% </p>
+              <p className="text-base">Happy customers</p>
             </div>
             <div className="space-y-2">
               <p className="text-4xl font-bold text-center">12+ </p>
