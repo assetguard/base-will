@@ -293,7 +293,8 @@ const App = () => {
 
         {/* Stats section */}
         <section id="stats" className="bg-green text-white p-10">
-          <div className="flex justify-evenly items-center">
+          <p className="text-2xl font-semibold text-center text-sky">Why You Can Depend On Us</p>
+          <div className="flex justify-evenly items-center mt-4">
             <div className="space-y-2">
               <p className="text-4xl font-bold text-center">$500M </p>
               <p className="text-base">Total assets and funds locked </p>
