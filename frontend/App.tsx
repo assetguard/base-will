@@ -188,15 +188,14 @@ const App = () => {
               Our asset locking platform allows you to securely lock your funds on the Aptos blockchain, ensuring that
               they remain protected until specified conditions are met. With features like automatic unlocking for
               designated beneficiaries upon the owner's passing, you can have peace of mind knowing that your assets
-              will be distributed seamlessly. Customize your beneficiary settings to suit your estate planning needs,
-              all while enjoying the transparency and security that blockchain technology provides.
+              will be distributed seamlessly. 
             </p>
           </div>
 
-          <div className="flex space-x-3 items-center mt-6">
+          <div className="flex justify-evenly space-x-3 items-center mt-6">
             <Card className="bg-transparent rounded-none border border-gray-500 py-6">
               <CardContent className="flex flex-col gap-6">
-                <CircleArrowDown />
+                <img src='/secure.svg' className="w-16 h-16" />
 
                 <div className="space-y-2">
                   <p className="font-semibold text-navy">100% Secure</p>
@@ -212,7 +211,7 @@ const App = () => {
 
             <Card className="bg-transparent rounded-none border border-gray-500 py-6">
               <CardContent className="flex flex-col gap-6">
-                <CircleArrowDown />
+                <img src='/beneficiary.svg' className="w-16 h-16" />
 
                 <div className="space-y-2">
                   <p className="font-semibold text-navy">Multiple Beneficiaries</p>
@@ -228,7 +227,7 @@ const App = () => {
 
             <Card className="bg-carton rounded-none rounded-tr-[80px] border border-gray-500 py-6">
               <CardContent className="flex flex-col gap-6">
-                <CircleArrowDown />
+                <img src='/time-lock.svg' className="w-16 h-16" />
 
                 <div className="space-y-2">
                   <p className="font-semibold text-navy">Time Locked</p>
@@ -238,7 +237,7 @@ const App = () => {
                   </p>
                 </div>
 
-                <CircleArrowOutUpRight className="bg-green p-1 rounded-full" />
+                <CircleArrowOutUpRight className="bg-green p-1 text-white rounded-full" />
               </CardContent>
             </Card>
           </div>
