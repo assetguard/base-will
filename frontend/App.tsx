@@ -14,7 +14,7 @@ const App = () => {
     {
       question: "How does the fund locking feature work?",
       answer:
-        "Users can lock up their funds on the Aptos blockchain for designated beneficiaries, ensuring that the funds are securely held until a specified unlock time or event occurs.",
+        "Users can lock up their funds on the Base blockchain for designated beneficiaries, ensuring that the funds are securely held until a specified unlock time or event occurs.",
     },
     {
       question: "Can I specify multiple beneficiaries?",
@@ -38,7 +38,7 @@ const App = () => {
     {
       question: "Is the process secure?",
       answer:
-        "Absolutely! The funds are secured on the Aptos blockchain, which utilizes advanced cryptography and decentralized protocols to ensure safety and transparency.",
+        "Absolutely! The funds are secured on the Base blockchain, which utilizes advanced cryptography and decentralized protocols to ensure safety and transparency.",
     },
   ];
 
@@ -200,7 +200,7 @@ const App = () => {
                 <div className="space-y-2">
                   <p className="font-semibold text-navy">100% Secure</p>
                   <p className="text-sm text-green">
-                    Our platform ensures that your assets are fully secured on the Aptos blockchain, utilizing advanced
+                    Our platform ensures that your assets are fully secured on the Base blockchain, utilizing advanced
                     encryption and protocols to protect your funds at all times.
                   </p>
                 </div>
