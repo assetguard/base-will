@@ -13,7 +13,7 @@ export function Header() {
     <header className=" shadow-sm">
       <div className="container mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center">
         <h1 onClick={() => navigate("/")} className="text-xl font-semibold text-green mb-4 sm:mb-0 cursor-pointer">
-          AssetGuard
+          Base Will
         </h1>
         <nav className="mb-4 sm:mb-0 text-base ">
           <ul className="flex space-x-10 ">

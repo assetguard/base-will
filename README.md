@@ -1,11 +1,11 @@
-# Locked Coins DApp
+# Base-Will
 
-A decentralized application for managing time-locked cryptocurrency assets on the Aptos blockchain. This DApp allows sponsors to create, manage, and distribute time-locked coins to recipients.
+A decentralized application for managing time-locked cryptocurrency assets on the Base blockchain. This DApp allows sponsors to create, manage, and distribute time-locked coins to recipients.
 
 ## 🎯 Features
 
 - **Timed Distribution**: Set specific dates for asset distribution to beneficiaries
-- **Multi-Asset Support**: Compatible with any coin type on the Aptos blockchain
+- **Multi-Asset Support**: Compatible with any coin type on the Base blockchain
 - **Secure Management**: Full control over lockups with ability to modify or revoke
 - **User-Friendly Interface**: Modern Vite-powered frontend for easy interaction
 - **Real-Time Updates**: Live tracking of locked assets and claim status
@@ -32,7 +32,7 @@ Built with:
 ### Prerequisites
 - Node.js (v14 or higher)
 - Petra Wallet browser extension
-- Access to Aptos network (testnet/mainnet)
+- Access to Base network (testnet/mainnet)
 
 ### Installation
 
@@ -145,6 +145,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- Aptos team for the blockchain platform
+- Base team for the blockchain platform
 - Move language developers
 - Our amazing community of testers and early adopters

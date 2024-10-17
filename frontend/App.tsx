@@ -52,7 +52,7 @@ const App = () => {
       <header className="">
         <div className="container mx-auto px-8 py-6 flex flex-col sm:flex-row justify-between items-center">
           <div className="flex items-center space-x-12">
-            <h1 className="text-xl font-semibold text-green sm:mb-0">AssetGuard</h1>
+            <h1 className="text-xl font-semibold text-green sm:mb-0">Base Will</h1>
 
             <nav className="sm:mb-0 text-navy text-sm">
               <ul className="flex space-x-8">
@@ -178,14 +178,14 @@ const App = () => {
             <div>
               <p className="text-green text-xs">VALUES!</p>
               <h2 className="text-2xl font-semibold text-navy">
-                Keep your assets
+                Keep your digital will
                 <br />
                 <span className="">Well-secured</span>
               </h2>
             </div>
 
             <p className="text-green text-xs line-clamp-3 max-w-96">
-              Our asset locking platform allows you to securely lock your funds on the Aptos blockchain, ensuring that
+              Our asset locking platform allows you to securely lock your funds on the Base blockchain, ensuring that
               they remain protected until specified conditions are met. With features like automatic unlocking for
               designated beneficiaries upon the owner's passing, you can have peace of mind knowing that your assets
               will be distributed seamlessly. 
@@ -354,7 +354,7 @@ const App = () => {
         <div className="container mx-auto px-8">
           <div className="flex flex-col sm:flex-row justify-between items-center">
             <div className="mb-4 sm:mb-0">
-              <h3 className="text-lg font-semibold text-green">AssetGuard</h3>
+              <h3 className="text-lg font-semibold text-green">Base Will</h3>
               <p className="text-sm">Securing your digital future</p>
             </div>
             <nav className="mb-4 sm:mb-0 text-sm">
@@ -378,7 +378,7 @@ const App = () => {
             </nav>
           </div>
           <div className="mt-4 text-center text-sm">
-            <p>&copy; 2024 AssetGuard. All rights reserved.</p>
+            <p>&copy; 2024 Base Will. All rights reserved.</p>
           </div>
         </div>
       </footer>
